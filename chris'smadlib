@@ -1,0 +1,2 @@
+from random import shuffle
+def split_words(lst):
