@@ -34,6 +34,9 @@ from random import randint
 user_dice_roll = int(input("Number of dice you want to roll: "))
 die_side = int(input("Number of sides per dice:  "))
 
-
+counter = 0
 for i in range (1, user_dice_roll+1):
-    print('Roll Number:',*(i), 'Dice No.',(randint(1, die_side)))
+    g=randint(1,die_side)
+    print(g)
+    counter = counter+g
+    # print('Roll Number:',(i), 'Dice No.:',(g), 'Total vaule of dice rolled: ', (counter))

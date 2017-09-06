@@ -188,52 +188,90 @@ name = 'Chris'
 #     print('sucka')
 #
 # print(foo(1, 2))
-# word =int(input("Type in a number "))
-# def _radius_sample_(radius):
-#     area = 3.14 * radius * radius
-#     print(area)
+# # word =int(input("Type in a number "))
+# # def _radius_sample_(radius):
+# #     area = 3.14 * radius * radius
+# #     print(area)
+# #
+# # _radius_sample_(word)
+# # print(ran)
+# # ran += 1
+# # try:
+# #     q = int(input('press 1 to continue press 2 to exit: '))
+# # except:
+# #     print('I don\'t understand what you said. ')
+# # if q==1:
+# #     continue()
+# # elif q==2:
+# #     exit()
 #
-# _radius_sample_(word)
-# print(ran)
-# ran += 1
-# try:
-#     q = int(input('press 1 to continue press 2 to exit: '))
-# except:
-#     print('I don\'t understand what you said. ')
-# if q==1:
-#     continue()
-# elif q==2:
-#     exit()
-
-# file = open('today.txt', 'r')
-# contents = file.readlines()
-# for line in contents:
-#     print(line)
-# print(contents)
-# file.close()
+# # file = open('today.txt', 'r')
+# # contents = file.readlines()
+# # for line in contents:
+# #     print(line)
+# # print(contents)
+# # file.close()
+# #
+# # with open('today.txt', 'r') as file:
+# #     contents = file.readlines()
+# #     for line in contents:
+# #         print(line)
 #
-# with open('today.txt', 'r') as file:
-#     contents = file.readlines()
-#     for line in contents:
-#         print(line)
+# def read_file (file_path):
+#     with open (file_path, 'r') as file:
+#         contents = file.readlines()
+#         for line in contents:
+#             print(line)
+#     print(contents)
+#
+# def write_file(file_path):
+#     with open(file_path, 'w') as file:
+#         times = int(input("What would like to write to this file?: "))
+#         ran = 0
+#         list_of_lines = []
+#         while ran < times:
+#             list_of_lines.append(input("What would like to write to this file?: "))
+#             ran +=1
+#         for line in list_of_lines:
+#             file.write(line + '\n')
+#
+# write_file('today.txt')
+# read_file('today.txt')
 
-def read_file (file_path):
-    with open (file_path, 'r') as file:
-        contents = file.readlines()
-        for line in contents:
-            print(line)
-    print(contents)
+# python3 -m venv (virtual reality path) temp(name of the virtual reality path-- can name it anything you want)
+# --(have to activate vr prior to using it)
+# . .\tmp\bin\activate((macs)path to activate) or .\tmp\Scripts\Activate.ps1
+# will work if you see the name of the VR is on the left side of the screen.. i.g(tmp) C..
+# pip-- package repository or module  (install)
 
-def write_file(file_path):
-    with open(file_path, 'w') as file:
-        times = int(input("What would like to write to this file?: "))
-        ran = 0
-        list_of_lines = []
-        while ran < times:
-            list_of_lines.append(input("What would like to write to this file?: "))
-            ran +=1
-        for line in list_of_lines:
-            file.write(line + '\n')
+#################TUESDAY SEPTEMBER 5TH 2017#######################
+# def  make_html(tag, contents):
+#     return ('<{0}> {1} </{0}>'.format(tag, contents))
+# print(make_html('bitch', 'cats are cool!'))
 
-write_file('today.txt')
-read_file('today.txt')
+# def print_msg(msg):
+#
+#     def printer():
+#         print(msg)
+#     printer()
+# print_msg('Hello, World')
+def make_html_p(function, *args, **kwargs):
+    def inner(args):
+        print('something happening to {}'.format(function.__name__))
+        function(args)
+        print('{} is finished.'.format(function.__name__))
+    return (inner)
+
+@make_html_p
+def print_body(body):
+    print(body)
+
+print_body('this is a message')
+# def make_multiplier_of(n):
+#     def multiplier(x):
+#         return(x*n)
+#     return(multiplier)
+# times3=make_multiplier_of(3)
+# times5=make_multiplier_of(5)
+#
+# print(times3(9))
