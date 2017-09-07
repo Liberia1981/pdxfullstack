@@ -36,13 +36,15 @@ def zipcoder(package3):
 def cityname(city3):
     package = {
       'APPID': "6e2e08a69687bf4c11d139767e4c7b91",
-      'name': 'London',
+      'q': 'London',
+      'units': 'Imperial'
     }
     print(city3)
-    package['name']='Carins'
+    package['q']=city3
     r = requests.post('http://api.openweathermap.org/data/2.5/weather', params=package)
     data = r.json()
-    print(data)
+    x=int(data['main']['temp'])
+    print("The temp. for that city is:",x,"Fahrenheit")
 
 if user_question == 2:
     package3 = int(input("Type a zip code: "))
