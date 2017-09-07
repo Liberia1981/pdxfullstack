@@ -1,0 +1,8 @@
+Javascript object notification:
+
+  json is like dictionary --- key value pairing
+  {'key': value}
+  will access thing through d.notation
+  i.g.
+    data= {"key": value}
+    console.data.key 

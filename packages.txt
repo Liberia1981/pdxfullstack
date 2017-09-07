@@ -1,0 +1,22 @@
+python package:
+How to install and use packages on python---
+  www.google.----  look up 'python requests'
+  --click on requests---
+  look at installation on top of webpage
+  pip is the install repository for python--- can general trust what is on there
+
+import requests
+
+r = requests.get('http://www.google.com')
+# request to google to inform you how many
+print(r.status_code)
+
+from requests import get()
+
+import requests as foo
+
+r = foo.get('http//www.google.com')
+
+print(r.status_code)
+
+look up stuff on pip packing on youtube for better explanation ====++==+++++++++

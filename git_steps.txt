@@ -1,0 +1,6 @@
+git steps
+1. git pull
+2. git status
+3. git add (<filename> or --all)
+4. git commit -m "message"
+5. git push
