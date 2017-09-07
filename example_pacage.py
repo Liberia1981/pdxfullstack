@@ -16,7 +16,7 @@ package = {
 
 r = requests.post('http://api.openweathermap.org/data/2.5/weather?', params=package)
 data = r.json()
-x=int(data['main']['temp'])
+x=intdata['main']['temp'])
 print("The temp. for that zip is:",x,"Fahrenheit")
 
 
